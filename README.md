@@ -146,6 +146,20 @@ cmake --build build -j$(sysctl -n hw.ncpu)
 - **Windows:** `%APPDATA%\empl-front\empl-front.ini`
 - **macOS:** `~/Library/Preferences/com.empl-front.plist`
 
+## 📸 Скриншоты
+
+
+### Управление сотрудниками
+![Просмотр](docs/screenshots/employees.png)
+![Редактирование](docs/screenshots/employees-edit.png)
+
+### Управление справочниками (на примере отделов)
+![Просмотр](docs/screenshots/departments.png)
+![Редактирование](docs/screenshots/departments-edit.png)
+
+### Настройки
+![Настройки](docs/screenshots/settings.png)
+
 ## 📁 Структура проекта
 
 ```
