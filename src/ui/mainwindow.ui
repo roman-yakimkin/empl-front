@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>913</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Учет сотрудников</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1117</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menunavMenu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="actionEmployees"/>
+    <addaction name="actionDepartments"/>
+    <addaction name="actionPositions"/>
+    <addaction name="separator"/>
+    <addaction name="actionSettings"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menunavMenu"/>
+  </widget>
+  <action name="actionEmployees">
+   <property name="text">
+    <string>Сотрудники</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionDepartments">
+   <property name="text">
+    <string>Отделы</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionPositions">
+   <property name="text">
+    <string>Должности</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="toolTip">
+    <string>Выход</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

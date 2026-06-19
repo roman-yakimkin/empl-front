@@ -1,0 +1,52 @@
+# Build folders
+build/
+cmake-build-debug/
+cmake-build-release/
+out/
+
+# CLion
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# Qt Creator
+*.pro.user*
+*.pro.user.*
+*.qbs.user*
+*.qbs.user.*
+CMakeLists.txt.user
+
+# Qt auto-generated
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.qmlc
+*.jsc
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+coverage/
+*.gcov
+*.gcda
+*.gcno

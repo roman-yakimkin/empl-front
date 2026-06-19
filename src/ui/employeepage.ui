@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EmployeePage</class>
+ <widget class="QWidget" name="EmployeePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>853</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Сотрудники</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTableView" name="tableView">
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widgetRight" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>251</width>
+         <height>0</height>
+        </size>
+       </property>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>251</width>
+          <height>341</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="pgBtn">
+         <widget class="QPushButton" name="btnDel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Удалить</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnAdd">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Добавить</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pgInsUpd">
+         <widget class="QPushButton" name="btnIUCancel">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>290</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Отмена</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnSave">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>290</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Сохранить</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbItemName">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>231</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>ФИО сотрудника</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="leItemName">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>231</width>
+            <height>32</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>90</y>
+            <width>58</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Отдел:</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QComboBox" name="cbDepartments"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnAddDepartment">
+             <property name="maximumSize">
+              <size>
+               <width>38</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>170</y>
+            <width>81</width>
+            <height>18</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Должность</string>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>190</y>
+            <width>231</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QComboBox" name="cbPositions"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnAddPosition">
+             <property name="maximumSize">
+              <size>
+               <width>38</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="pgDel">
+         <widget class="QPushButton" name="btnDelDo">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>120</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Удалить</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btnDelCancel">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>120</y>
+            <width>88</width>
+            <height>34</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Отмена</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbDelConfirm">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>231</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Вы уверены в том, что хотите удалить сотрудника  %1 ?</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
