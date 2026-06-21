@@ -16,7 +16,7 @@ namespace model {
         Department(const int id, const QString& name): id(id), name(name) {}
 
         static Department fromJson(const QJsonObject& json) {
-            return Department(json["id"].toInt(), json["name"].toString());
+            return {json["id"].toInt(), json["name"].toString()};
         }
 
         QJsonObject toJson() const {

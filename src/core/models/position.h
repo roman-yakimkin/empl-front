@@ -9,14 +9,14 @@
 
 namespace model {
     struct Position {
-        int id;
+        int id = 0;
         QString name;
 
         Position() = default;
         Position(const int id, const QString& name): id(id), name(name) {}
 
         static Position fromJson(const QJsonObject& json) {
-            return Position(json["id"].toInt(), json["name"].toString());
+            return {json["id"].toInt(), json["name"].toString()};
         }
 
         QJsonObject toJson() const {

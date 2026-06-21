@@ -57,3 +57,9 @@ target_link_libraries(empl_front
 
 target_include_directories(empl_front PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
+enable_testing()
+
+find_package(Qt6 REQUIRED COMPONENTS Test)
+
+add_subdirectory(tests)
+

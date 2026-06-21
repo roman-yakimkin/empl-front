@@ -12,7 +12,7 @@
 
 namespace model {
     struct Employee {
-        int id;
+        int id = 0;
         QString name;
         Department department;
         Position position;
