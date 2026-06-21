@@ -5,16 +5,16 @@
 #pragma once
 
 #include "core/contracts/i_position_repo.h"
-#include "infrastructure/httpclient.h"
+#include "core/contracts/i_http_client.h"
 #include "core/cmd/position.h"
 
 namespace repo {
     class Position : public QObject, public core::IPositionRepo {
         Q_OBJECT
 
-        infra::HttpClient* m_http_client;
+        core::IHttpClient* m_http_client;
     public:
-        explicit Position(infra::HttpClient* http_client, QObject* parent = nullptr)
+        explicit Position(core::IHttpClient* http_client, QObject* parent = nullptr)
             : QObject(parent), m_http_client(http_client) {
             if (!m_http_client) throw std::invalid_argument("http client cannot be null");
         };
@@ -25,6 +25,5 @@ namespace repo {
         void create(const cmd::position::Create &cmd, PositionCallback callback) override;
         void update(const cmd::position::Update &cmd, PositionCallback callback) override;
         void del(const cmd::position::Delete &cmd, BoolCallback callback) override;
-
     };
 } // repo

@@ -10,9 +10,10 @@
 #include <QJsonDocument>
 
 #include "core/contracts/i_configurable_client.h"
+#include "core/contracts/i_http_client.h"
 
 namespace infra {
-    class HttpClient : public QObject, public core::IConfigurableClient {
+    class HttpClient : public QObject, public core::IConfigurableClient, public core::IHttpClient {
         Q_OBJECT
     private:
         QNetworkAccessManager* m_manager = nullptr;
@@ -22,9 +23,6 @@ namespace infra {
         QHash<QString, QString> m_default_handlers;
 
     public:
-        using JsonCallback = std::function<void(const QJsonObject& json, const QString& error)>;
-        using RawCallback = std::function<void(const QByteArray& data, const QString& error)>;
-
         explicit HttpClient(QString baseUrl, int port, int timeOutSec, QObject* parent = nullptr);
         ~HttpClient() override = default;
 
@@ -42,10 +40,10 @@ namespace infra {
         void clearDefaultHeaders();
 
         // HTTP методы
-        void get(const QString& endpoint, const JsonCallback& callback);
-        void post(const QString& endpoint, const QJsonObject& payload, const JsonCallback& callback);
-        void put(const QString& endpoint, const QJsonObject& payload, const JsonCallback& callback);
-        void del(const QString& endpoint, const JsonCallback& callback);
+        void get(const QString& endpoint, const JsonCallback& callback) override;
+        void post(const QString& endpoint, const QJsonObject& payload, const JsonCallback& callback) override;
+        void put(const QString& endpoint, const QJsonObject& payload, const JsonCallback& callback) override;
+        void del(const QString& endpoint, const JsonCallback& callback) override;
 
     signals:
         void requestStarted();

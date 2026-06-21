@@ -5,15 +5,15 @@
 #pragma once
 
 #include "core/contracts/i_employee_repo.h"
-#include "infrastructure/httpclient.h"
+#include "core/contracts/i_http_client.h"
 
 namespace repo {
     class Employee : public QObject, public core::IEmployeeRepo {
         Q_OBJECT
 
-        infra::HttpClient* m_http_client;
+        core::IHttpClient* m_http_client;
     public:
-        explicit Employee(infra::HttpClient* http_client, QObject* parent = nullptr)
+        explicit Employee(core::IHttpClient* http_client, QObject* parent = nullptr)
             : QObject(parent), m_http_client(http_client) {
             if (!m_http_client) throw std::invalid_argument("http client cannot be null");
         };

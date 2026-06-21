@@ -4,16 +4,16 @@
 
 #pragma once
 #include "core/contracts/i_department_repo.h"
-#include "infrastructure/httpclient.h"
+#include "core/contracts/i_http_client.h"
 #include "core/cmd/department.h"
 
 namespace repo {
     class Department : public QObject, public core::IDepartmentRepo {
         Q_OBJECT
 
-        infra::HttpClient* m_http_client;
+        core::IHttpClient* m_http_client;
     public:
-        explicit Department(infra::HttpClient* http_client, QObject* parent = nullptr)
+        explicit Department(core::IHttpClient* http_client, QObject* parent = nullptr)
             : QObject(parent), m_http_client(http_client) {
             if (!m_http_client) throw std::invalid_argument("http client cannot be null");
         };
