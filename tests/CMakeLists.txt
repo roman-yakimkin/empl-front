@@ -35,3 +35,26 @@ add_qt_test(test_employee_repo
         ${CMAKE_SOURCE_DIR}/src/repositories/employee.cpp
         ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
 )
+
+add_qt_test(test_department_svc
+        services/test_department_svc.cpp
+        mocks/mock_department_repo.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_department_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
+add_qt_test(test_position_svc
+        services/test_position_svc.cpp
+        mocks/mock_position_repo.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_position_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
+add_qt_test(test_employee_svc
+        services/test_employee_svc.cpp
+        mocks/mock_employee_repo.h
+        ${CMAKE_SOURCE_DIR}/src/core/models/employee.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_employee_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/employee.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
