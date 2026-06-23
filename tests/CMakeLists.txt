@@ -58,3 +58,87 @@ add_qt_test(test_employee_svc
         ${CMAKE_SOURCE_DIR}/src/services/employee.cpp
         ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
 )
+
+add_qt_test(test_department_page
+        ui/test_department_page.cpp
+        mocks/mock_department_svc.h
+        ${CMAKE_SOURCE_DIR}/src/ui/common/basepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/departmentpage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/departmentpage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/department.h
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_department_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
+add_qt_test(test_position_page
+        ui/test_position_page.cpp
+        mocks/mock_position_svc.h
+        ${CMAKE_SOURCE_DIR}/src/ui/common/basepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/positionpage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/positionpage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/position.h
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_position_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
+add_qt_test(test_employee_page
+        ui/test_employee_page.cpp
+        mocks/mock_department_svc.h
+        mocks/mock_position_svc.h
+        mocks/mock_employee_svc.h
+        ${CMAKE_SOURCE_DIR}/src/ui/common/basepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/employeepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/employeepage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/employee.h
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/employee.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_department_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_position_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_employee_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/employee.cpp
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)
+
+add_qt_test(test_main_window
+        ui/test_main_window.cpp
+        mocks/mock_configurable_client.h
+        mocks/mock_department_svc.h
+        mocks/mock_position_svc.h
+        mocks/mock_employee_svc.h
+
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_configurable_client.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_department_svc.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_department_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_position_svc.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_position_svc.cpp
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_employee_svc.h
+        ${CMAKE_SOURCE_DIR}/src/core/contracts/i_employee_svc.cpp
+
+        ${CMAKE_SOURCE_DIR}/src/ui/common/basepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/mainwindow.h
+        ${CMAKE_SOURCE_DIR}/src/ui/mainwindow.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/departmentpage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/departmentpage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/positionpage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/positionpage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/employeepage.h
+        ${CMAKE_SOURCE_DIR}/src/ui/employeepage.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/settings.h
+        ${CMAKE_SOURCE_DIR}/src/ui/settings.cpp
+
+        # Модели таблиц
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/ui/models/table/employee.cpp
+
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/appconfig.cpp
+
+        ${CMAKE_SOURCE_DIR}/src/services/department.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/position.cpp
+        ${CMAKE_SOURCE_DIR}/src/services/employee.cpp
+
+        ${CMAKE_SOURCE_DIR}/src/infrastructure/logging.cpp
+)

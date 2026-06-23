@@ -32,6 +32,7 @@ namespace views {
         if (!pos_svc) throw std::invalid_argument("position service cannot be null");
         if (!empl_svc) throw std::invalid_argument("employee service cannot be null");
         if (!cfg) throw std::invalid_argument("config cannot be null");
+        if (!client) throw std::invalid_argument("configurable client cannot be null");
 
         m_dep_svc = dep_svc;
         m_pos_svc = pos_svc;
